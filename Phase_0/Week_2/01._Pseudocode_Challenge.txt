@@ -1,0 +1,62 @@
+# Newton Second Law
+## Algoritma
+1. Berat Mobil = 600 kg
+2. Percepatan 3 orang = 2 m/s2
+3. Hitung "Force"
+4. Cetak "Force"
+## Pseudocode
+SET car with value 600
+SET a with value 2
+SET F with CALCULATE car * a
+PRINT F
+
+
+# Tahun Kabisat
+## Algoritma
+1. Masukan nilai tahun
+2. Jika tahun MOD 4 == 0 Maka "Tahap selanjutnya". Atau Cetak("Bukan Kabisat")
+3. Jika tahun MOD 100 == 0 Maka "Tahap selanjutnya". Atau Cetak("Kabisat")
+4. Jika tahun MOD 400 == 0 Maka Cetak("Kabisat"). Atau Cetak("Bukan Kabisat")
+## Pseudocode
+READ tahun
+IF (tahun % 4 == 0) THEN
+    IF (tahun % 100 == 0) THEN
+        IF (tahun % 400 == 0) THEN
+            PRINT "Kabisat"
+        ELSE
+            PRINT "Bukan Kabisat"
+    ELSE
+        PRINT "Kabisat"
+ELSE
+    PRINT "Bukan Kabisat"
+
+
+# Laundry Day
+## Algoritma
+1. Jumlah Pakaian = 20
+2. Hitung mundur Pakaian hingga 0
+3. Cetak("Mencuci!!!")
+## Pseudocode
+Pakaian = 20;
+FOR i = Pakaian downto 0
+    PRINT i
+ENDFOR
+PRINT("Mencuci!!!")
+
+
+# Periksa Kuku
+## Algoritma
+## Pseudocode
+SET siswa with Array[40]
+FOR i = 1 to 40
+    // True adalah Kuku Rapi
+    // False adalah Kuku Panjang
+    CALCULATE siswa[i] as random(True or False)
+ENDFOR
+FOR i = 1 to 40
+    IF (siswa[i]) THEN
+        PRINT "Pujian"
+    ELSE
+        PRINT "Hukuman"
+    ENDIF
+ENDFOR
