@@ -1,6 +1,6 @@
 var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
-function dataHandling2(data = []) {
+function dataHandling2(data) {
     data.splice(1, 2, data[1] + "Elsharawy", "Provinsi " + data[2]);
     data.splice(4, 1, "Pria", "SMA Internasional Metro");
 
