@@ -1,21 +1,15 @@
 function angkaPalindrome(num) {
     // you can only write your code here!
-    let counter = false
-    while (counter === false){
+    let stop = false
+    while (!stop){
         num += 1;
-        if ((num >= 0) && (num <= 9)) {
-            counter = true;
+        let temp = num;
+        let newNum = 0;
+        while (temp != 0) {
+            newNum = (newNum * 10) + (temp % 10);
+            temp = Math.trunc(temp / 10);
         }
-        else {
-            let temp = num;
-            let newNum = 0;
-            while (temp != 0) {
-                newNum = (newNum * 10) + (temp % 10);
-                // console.log(`${temp}, ${newNum}`);
-                temp = Math.trunc(temp / 10);
-            }
-            counter = ((newNum === num) ? true : false);
-        }
+        stop = ((newNum === num) ? true : false);
     }
     return num;
 }
