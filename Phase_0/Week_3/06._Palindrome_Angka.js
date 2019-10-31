@@ -5,7 +5,7 @@ function angkaPalindrome(num) {
         num += 1;
         let temp = num;
         let newNum = 0;
-        while (temp != 0) {
+        while (temp !== 0) {
             newNum = (newNum * 10) + (temp % 10);
             temp = Math.trunc(temp / 10);
         }

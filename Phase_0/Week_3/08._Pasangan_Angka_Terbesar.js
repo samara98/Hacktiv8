@@ -2,7 +2,7 @@ function pasanganTerbesar(num) {
     // you can only write your code here!
     let maxCouple = num % 100;
     num = Math.trunc(num / 10);
-    while ( !((num > -10) && (num < 10)) ) {
+    while ((Math.trunc(num / 10)) !== 0) {
         ((num % 100) > maxCouple) ? maxCouple = num % 100 : maxCouple = maxCouple;
         num = Math.trunc(num / 10);
     }
