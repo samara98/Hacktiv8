@@ -4,18 +4,15 @@ function groupAnimals(animals) {
     for (let i = 0; i < animals.length; i++) {
         let found = false;
         for (let j = 0; j < result.length; j++) {
-            if (animals[i][0] === result[j][0]) { 
-                found = true;
+            if (animals[i][0] === result[j][0][0]) { 
                 result[j].push(animals[i])
+                found = true;
                 break;
             }
         }
         if (!found) {
-            result.push([animals[i][0], animals[i]])
+            result.push([animals[i]])
         }
-    }
-    for (let i = 0; i < result.length; i++) {
-        result[i] = result[i].slice(1);
     }
     return result.sort();
 }

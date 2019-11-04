@@ -3,32 +3,28 @@ function targetTerdekat(arr) {
     let o = -1;
     let nearest;
     let target = [];
-    // finding "o"
+    // finding "o" and "x"
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].toLowerCase() === "o") {
             o = i;
-            break
+        }
+        if (arr[i].toLowerCase() === "x") {
+            target.push(i)
         }
     }
-    if (o !== -1) {
-        // locating "x"
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i].toLowerCase() === "x") {
-                target.push(i)
-            }
-        }
-        //finding nearest target
-        if (target.length !== 0) {
-            nearest = Math.abs(target[0] - o)
-            for (let i = 1; i < target.length; i++) {
-                if (Math.abs(target[i] - o) < nearest) {
-                    nearest = Math.abs(target[i] - o);
-                }
-            }
-            return nearest;
-        }
+    if (o === -1 || target.length === 0) {
+        return 0;
     }
-    return 0;
+    //finding nearest target
+    if (target.length !== 0) {
+        nearest = Math.abs(target[0] - o)
+        for (let i = 1; i < target.length; i++) {
+            if (Math.abs(target[i] - o) < nearest) {
+                nearest = Math.abs(target[i] - o);
+            }
+        }
+        return nearest;
+    }
 }
 
 // TEST CASES
