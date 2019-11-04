@@ -1,8 +1,8 @@
 function targetTerdekat(arr) {
     // you can only write your code here!
     let o = -1;
-    let nearest;
     let target = [];
+    let nearest;
     // finding "o" and "x"
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].toLowerCase() === "o") {
