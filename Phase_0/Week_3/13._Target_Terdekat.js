@@ -16,15 +16,13 @@ function targetTerdekat(arr) {
         return 0;
     }
     //finding nearest target
-    if (target.length !== 0) {
-        nearest = Math.abs(target[0] - o)
-        for (let i = 1; i < target.length; i++) {
-            if (Math.abs(target[i] - o) < nearest) {
-                nearest = Math.abs(target[i] - o);
-            }
+    nearest = Math.abs(target[0] - o)
+    for (let i = 1; i < target.length; i++) {
+        if (Math.abs(target[i] - o) < nearest) {
+            nearest = Math.abs(target[i] - o);
         }
-        return nearest;
     }
+    return nearest;
 }
 
 // TEST CASES
